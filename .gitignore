@@ -1,0 +1,22 @@
+node_modules
+.env
+.env.local
+.env*.local
+node_modules/
+.next/
+dist/
+*.pkg
+.DS_Store
+
+# Private / local-only files
+.env.*
+!.env.example
+!.env.local.example
+.claude/
+.vercel/
+*.zip
+*.docx
+recovery-codes*
+HireSignal_Cursor_Build_Prompt.md
+stitch_hiresignal_the_hiring_revolt/
+vite.config.js.timestamp-*

@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary:     #0a0a0a;
+  --bg-secondary:   #111111;
+  --bg-tertiary:    #1e1e1e;
+  --bg-hover:       #252525;
+  --text-primary:   #ffffff;
+  --text-secondary: #a0a0a0;
+  --border-color:   #2a2a2a;
+  --accent: #6366F1;
+  --high:   #22C55E;
+  --medium: #F59E0B;
+  --low:    #EF4444;
+  --nodata: #6B7280;
+
+  /* HireSignal Revolt landing — activist brutalism */
+  --signal-red:  #FF0033;
+  --void-black:  #0A0A0A;
+  --stark-white: #FFFFFF;
+  --seal-gold:   #E9C400;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ── Revolt landing utilities ─────────────────────────────────────────── */
+
+/* Full-page grain overlay — printed-feel, fixed, non-interactive, low opacity */
+.revolt-grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Hazard stripes — diagonal red & black, flat */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #FF0033 0,
+    #FF0033 24px,
+    #0A0A0A 24px,
+    #0A0A0A 48px
+  );
+}
+
+/* Stenciled stamp button — solid red → instant invert on hover */
+.btn-stamp {
+  display: inline-block;
+  background: #FF0033;
+  color: #FFFFFF;
+  border: 2px solid #FF0033;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-bebas), Impact, sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: none;
+  cursor: pointer;
+}
+.btn-stamp:hover {
+  background: #FFFFFF;
+  color: #FF0033;
+}
+
+.btn-stamp--outline {
+  background: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.btn-stamp--outline:hover {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+.btn-stamp--black {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border-color: #0A0A0A;
+}
+.btn-stamp--black:hover {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+/* Redaction bar — solid black bar, white text, sharp */
+.redacted {
+  display: inline-block;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  padding: 0 0.35em;
+  border: 1px solid #FFFFFF;
+}
+
+/* Label-tape chip — small mono tape */
+.label-tape {
+  display: inline-block;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 0.15rem 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.label-tape--red    { background: #FF0033; border-color: #FF0033; color: #FFFFFF; }
+.label-tape--gold   { background: #E9C400; border-color: #E9C400; color: #0A0A0A; }
+.label-tape--ghost  { background: transparent; color: #FFFFFF; border-color: #FFFFFF; }
+
+/* Sharp input — full box, no rounding */
+.input-sharp {
+  background: #FFFFFF;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  font-family: var(--font-chivo), system-ui, sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+.input-sharp:focus {
+  border-color: #FF0033;
+}
+
+/* "Most wanted" stamp — angled red badge */
+.most-wanted-stamp {
+  display: inline-block;
+  background: #FF0033;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  font-family: var(--font-bebas), Impact, sans-serif;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  transform: rotate(-6deg);
+}

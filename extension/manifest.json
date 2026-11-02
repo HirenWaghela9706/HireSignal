@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "HireSignal",
+  "version": "1.0.0",
+  "description": "Hiring intent intelligence for job seekers",
+  "permissions": ["storage", "activeTab", "identity", "tabs", "scripting", "webNavigation"],
+  "host_permissions": ["<all_urls>", "http://localhost:3001/*"],
+  "externally_connectable": {
+    "matches": ["http://localhost:3000/*", "https://hiresignal.com/*"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["src/content.jsx"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "src/background/index.js"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  }
+}

@@ -1,0 +1,418 @@
+.container {
+  width: 300px;
+  padding: 18px 20px;
+  background: #0F172A;
+  color: #F8FAFC;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.signOutBtn {
+  background: none;
+  border: none;
+  color: #64748B;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+.signOutBtn:hover { color: #94A3B8; }
+
+/* Job detected card */
+.jobCard {
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.jobCardCompany {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8FAFC;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jobCardRole {
+  font-size: 11px;
+  color: #94A3B8;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Primary / secondary buttons */
+.primaryBtn {
+  width: 100%;
+  background: #6366F1;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.primaryBtn:hover { opacity: 0.9; }
+.primaryBtn:disabled { opacity: 0.5; cursor: default; }
+
+.secondaryBtn {
+  width: 100%;
+  background: #1E293B;
+  color: #CBD5E1;
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.secondaryBtn:hover { background: #334155; }
+
+/* Not a job page state */
+.notJobMsg {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.notJobIcon {
+  font-size: 18px;
+  color: #F59E0B;
+  line-height: 1;
+  margin-top: 1px;
+}
+.notJobTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F59E0B;
+}
+.notJobDetail {
+  font-size: 11px;
+  color: #64748B;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* Scanning state */
+.scanningMsg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 12px;
+}
+.spinner {
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Error state */
+.errorMsg {
+  font-size: 12px;
+  color: #F87171;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.errorIcon { margin-right: 4px; }
+
+/* Posting age / expiry info line */
+.expiryLine {
+  font-size: 10px;
+  color: #94A3B8;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* Repost warning */
+.repostWarning {
+  font-size: 11px;
+  color: #F59E0B;
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.status {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  background: #6366F1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #F8FAFC;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.lastJob {
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.lastJobCompany {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8FAFC;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lastJobScore {
+  font-size: 12px;
+  color: #94A3B8;
+  margin: 0;
+}
+
+.lastJobScore strong {
+  color: #6366F1;
+}
+
+.hint {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.scanBtn {
+  width: 100%;
+  background: #1E293B;
+  color: #F8FAFC;
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-align: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.scanBtn:hover:not(:disabled) {
+  background: #334155;
+}
+
+.scanBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.scanDone {
+  border-color: #22C55E;
+  color: #22C55E;
+}
+
+.scanWarn {
+  border-color: #F59E0B;
+  color: #F59E0B;
+}
+
+.scanError {
+  border-color: #EF4444;
+  color: #EF4444;
+}
+
+/* ── Scan state messages ─────────────────────────────────────────────────── */
+.stateMsg {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stateDetail {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94A3B8;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.spinner {
+  opacity: 0.7;
+}
+
+/* ── Score result card ───────────────────────────────────────────────────── */
+.resultCard {
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.resultRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.scoreBig {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 52px;
+  text-align: center;
+}
+
+.resultMeta {
+  flex: 1;
+}
+
+.intentLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.confidenceBadge {
+  font-size: 10px;
+  color: #94A3B8;
+  margin-top: 3px;
+}
+
+.signalCount {
+  font-size: 10px;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.cachedLine {
+  font-size: 10px;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.breakdownToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid #1E293B;
+  color: #64748B;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 6px 0 0;
+  margin-top: 8px;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+.breakdownToggle:hover { color: #94A3B8; }
+
+.resultBar {
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.resultBarFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.resultCompany {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8FAFC;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultRole {
+  font-size: 11px;
+  color: #94A3B8;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.signalList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signalItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 3px solid;
+  padding-left: 8px;
+  font-size: 11px;
+}
+
+.signalPoints {
+  font-weight: 700;
+  min-width: 28px;
+  font-size: 11px;
+}
+
+.signalLabel {
+  color: #CBD5E1;
+  line-height: 1.3;
+}
+
+/* ── Scanning skeleton ───────────────────────────────────────────────────── */
+.skeletonLine {
+  background: #334155;
+  border-radius: 4px;
+  height: 12px;
+  width: 80%;
+  margin: 2px 0;
+}
+
+@keyframes shimmer {
+  0%   { opacity: 0.5; }
+  50%  { opacity: 1;   }
+  100% { opacity: 0.5; }
+}
+
+.shimmer {
+  animation: shimmer 1.4s ease-in-out infinite;
+}

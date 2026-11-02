@@ -1,0 +1,15 @@
+{
+  "name": "hiresignal",
+  "private": true,
+  "workspaces": ["api", "dashboard", "extension"],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=api",
+    "dev:dashboard": "npm run dev --workspace=dashboard",
+    "dev:extension": "npm run dev --workspace=extension",
+    "dev:all": "concurrently \"npm run dev:api\" \"npm run dev:dashboard\"",
+    "build:all": "npm run build --workspace=api && npm run build --workspace=dashboard && npm run build --workspace=extension"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
